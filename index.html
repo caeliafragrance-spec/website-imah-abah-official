@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Saya</title>
+
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            background: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 50px;
+
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* LOGO */
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #555;
+        }
+
+        /* MENU */
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #777;
+        }
+
+        /* LOGIN */
+
+        .login-btn {
+            padding: 10px 18px;
+            border-radius: 8px;
+            background: #111;
+            color: white !important;
+        }
+
+        .login-btn:hover {
+            background: #333;
+        }
+
+        /* ================= HOME ================= */
+
+        .home {
+            min-height: calc(100vh - 70px);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 40px;
+        }
+
+        .home-content {
+            max-width: 700px;
+        }
+
+        .home h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .home p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .home-btn {
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            background: #111;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background: #333;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .menu {
+                gap: 15px;
+            }
+
+            .menu a span {
+                display: none;
+            }
+
+            .home h1 {
+                font-size: 36px;
+            }
+
+            .home p {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            WEBSITE<span>.</span>
+        </div>
+
+
+        <!-- MENU -->
+        <ul class="menu">
+
+            <li>
+                <a href="login.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>About</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="login.html" class="login-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section class="home">
+
+        <div class="home-content">
+
+            <h1>Selamat Datang 👋</h1>
+
+            <p>
+                Selamat datang di website kami.
+                Temukan berbagai informasi dan layanan
+                yang tersedia di sini.
+            </p>
+
+            <a href="login.html" class="home-btn">
+                Mulai Sekarang
+            </a>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
+
