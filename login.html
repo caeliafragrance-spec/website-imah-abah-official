@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +7,75 @@
     <title>Login - Website Saya</title>
 
     <style>
-
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
         }
 
         body {
-            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
 
             display: flex;
             justify-content: center;
             align-items: center;
 
-            background: #f5f5f5;
+            min-height: 100vh;
         }
 
         .login-box {
             width: 380px;
-
             background: white;
-
             padding: 35px;
 
             border-radius: 15px;
 
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
 
-        .login-box h2 {
+        .login-box h1 {
             text-align: center;
             margin-bottom: 30px;
         }
 
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        .input-group label {
+        .login-box label {
             display: block;
-
             margin-bottom: 8px;
-
-            font-size: 14px;
             font-weight: bold;
         }
 
-        .input-group input {
+        .login-box input {
             width: 100%;
-
             padding: 13px;
 
             border: 1px solid #ccc;
-
             border-radius: 8px;
 
             font-size: 15px;
-
-            outline: none;
+            margin-bottom: 18px;
         }
 
-        .input-group input:focus {
-            border-color: #111;
+        .password-box {
+            position: relative;
+        }
+
+        .password-box input {
+            padding-right: 45px;
+        }
+
+        .eye-btn {
+            position: absolute;
+
+            right: 10px;
+            top: 12px;
+
+            border: none;
+            background: none;
+
+            font-size: 20px;
+            cursor: pointer;
+
+            padding: 3px;
         }
 
         .login-btn {
@@ -79,16 +83,13 @@
 
             padding: 13px;
 
-            border: none;
-
-            border-radius: 8px;
-
             background: #111;
-
             color: white;
 
-            font-size: 16px;
+            border: none;
+            border-radius: 8px;
 
+            font-size: 16px;
             cursor: pointer;
         }
 
@@ -96,22 +97,10 @@
             background: #333;
         }
 
-        .register-text {
+        #error {
+            color: red;
             text-align: center;
-
-            margin-top: 20px;
-
-            font-size: 14px;
-
-            color: #666;
-        }
-
-        .register-text a {
-            color: #111;
-
-            font-weight: bold;
-
-            text-decoration: none;
+            margin-top: 15px;
         }
 
         .back-home {
@@ -119,99 +108,138 @@
 
             text-align: center;
 
-            margin-top: 15px;
+            margin-top: 20px;
 
-            color: #666;
-
+            color: #555;
             text-decoration: none;
-
-            font-size: 14px;
         }
 
         .back-home:hover {
-            color: #111;
+            color: #000;
         }
-
     </style>
 </head>
 
-
 <body>
-
 
     <div class="login-box">
 
-        <h2>Login</h2>
+        <h1>Login</h1>
 
-
-        <form>
+        <form onsubmit="login(event)">
 
             <!-- USERNAME -->
-            <div class="input-group">
+            <label for="username">Username</label>
 
-                <label for="username">
-                    Username
-                </label>
-
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Masukkan username"
-                    required
-                >
-
-            </div>
+            <input
+                type="text"
+                id="username"
+                placeholder="Masukkan username"
+                required
+            >
 
 
             <!-- PASSWORD -->
-            <div class="input-group">
+            <label for="password">Password</label>
 
-                <label for="password">
-                    Password
-                </label>
+            <div class="password-box">
 
                 <input
                     type="password"
                     id="password"
-                    name="password"
                     placeholder="Masukkan password"
                     required
                 >
+
+                <button
+                    type="button"
+                    class="eye-btn"
+                    onclick="togglePassword()"
+                >
+                    👁
+                </button>
 
             </div>
 
 
             <!-- LOGIN -->
-            <button type="submit" class="login-btn">
+            <button
+                type="submit"
+                class="login-btn"
+            >
                 Login
             </button>
 
         </form>
 
+        <p id="error"></p>
 
-        <!-- DAFTAR -->
-        <div class="register-text">
-
-            Belum punya akun?
-
-            <a href="daftar.html">
-                Daftar
-            </a>
-
-        </div>
-
-
-        <!-- KEMBALI -->
         <a href="index.html" class="back-home">
             ← Kembali ke Home
         </a>
 
-
     </div>
 
 
-</body>
+    <script>
 
+        // LOGIN
+        function login(event) {
+
+            event.preventDefault();
+
+            const username =
+                document.getElementById("username").value;
+
+            const password =
+                document.getElementById("password").value;
+
+
+            // USERNAME & PASSWORD
+            if (
+                username === "admin" &&
+                password === "12345"
+            ) {
+
+                // LANGSUNG KE GRUP BARU
+                window.location.href = "grup.html";
+
+            } else {
+
+                document.getElementById("error").textContent =
+                    "Username atau password salah!";
+
+            }
+        }
+
+
+        // LIHAT PASSWORD
+        function togglePassword() {
+
+            const password =
+                document.getElementById("password");
+
+            const eye =
+                document.querySelector(".eye-btn");
+
+
+            if (password.type === "password") {
+
+                password.type = "text";
+
+                eye.textContent = "🙈";
+
+            } else {
+
+                password.type = "password";
+
+                eye.textContent = "👁";
+
+            }
+        }
+
+    </script>
+
+</body>
 </html>
 

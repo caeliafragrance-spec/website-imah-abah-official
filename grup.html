@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Grup - Website Saya</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            width: 100%;
+            padding: 18px 40px;
+
+            background: #111;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+
+            padding: 10px 15px;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: #333;
+        }
+
+        .menu a.active {
+            background: #333;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            text-align: center;
+
+            padding: 70px 20px 40px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #666;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           ALBUM
+        ========================= */
+
+        .album-container {
+            max-width: 1100px;
+
+            margin: 20px auto 60px;
+
+            padding: 20px;
+        }
+
+        .album-container h2 {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .album-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           ALBUM CARD
+        ========================= */
+
+        .album-card {
+            background: white;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+        }
+
+        .album-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 25px rgba(0,0,0,0.15);
+        }
+
+
+        /* GAMBAR ALBUM */
+
+        .album-image {
+            height: 220px;
+
+            background: linear-gradient(
+                135deg,
+                #222,
+                #777
+            );
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            font-size: 55px;
+        }
+
+
+        /* ISI CARD */
+
+        .album-content {
+            padding: 25px;
+        }
+
+        .album-content h3 {
+            margin-top: 0;
+
+            font-size: 22px;
+        }
+
+        .album-content p {
+            color: #666;
+
+            line-height: 1.6;
+        }
+
+
+        /* TOMBOL ALBUM */
+
+        .album-button {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            padding: 11px 18px;
+
+            background: #111;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .album-button:hover {
+            background: #333;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 25px;
+
+            background: #111;
+
+            color: white;
+
+            margin-top: 50px;
+        }
+
+
+        /* =========================
+           HP
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 15px 20px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .menu a {
+                font-size: 14px;
+
+                padding: 8px 10px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .album-image {
+                height: 180px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar">
+
+        <!-- HOME SEKARANG KE GRUP.HTML -->
+        <a href="grup.html" class="logo">
+            🏠 Home
+        </a>
+
+
+        <div class="menu">
+
+            <a href="#panitia">
+                📸 Album Panitia Agustus
+            </a>
+
+            <a href="#memories">
+                🖼️ Album Memories 2023–2026
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <h1>👥 Grup Baru</h1>
+
+        <p>
+            Selamat datang di halaman grup
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         ALBUM
+    ========================= -->
+
+    <section class="album-container">
+
+        <h2>📚 Album Foto</h2>
+
+
+        <div class="album-grid">
+
+
+            <!-- =====================
+                 ALBUM PANITIA AGUSTUS
+            ====================== -->
+
+            <div class="album-card" id="panitia">
+
+                <div class="album-image">
+                    🇮🇩
+                </div>
+
+                <div class="album-content">
+
+                    <h3>
+                        📸 Album Panitia Agustus
+                    </h3>
+
+                    <p>
+                        Kumpulan foto kegiatan
+                        panitia bulan Agustus.
+                    </p>
+
+                    <a
+                        href="album-panitia.html"
+                        class="album-button"
+                    >
+                        Lihat Album →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 ALBUM MEMORIES
+            ====================== -->
+
+            <div class="album-card" id="memories">
+
+                <div class="album-image">
+                    📷
+                </div>
+
+                <div class="album-content">
+
+                    <h3>
+                        🖼️ Album Memories 2023–2026
+                    </h3>
+
+                    <p>
+                        Kumpulan memories dan
+                        dokumentasi dari tahun
+                        2023 sampai 2026.
+                    </p>
+
+                    <a
+                        href="album-memories.html"
+                        class="album-button"
+                    >
+                        Lihat Album →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Website Saya
+
+    </footer>
+
+
+
+</body>
+</html>
+</section><!-- =========================
+     KEANGGOTAAN
+========================= -->
+
+<section class="member-register" id="keanggotaan">
+
+    <div class="member-icon">
+        👥
+    </div>
+
+    <h2>
+        Keanggotaan Imah Abah Official
+    </h2>
+
+    <p>
+        Mau bergabung menjadi anggota?
+        Daftarkan biodata kamu di sini.
+    </p>
+
+    <a href="daftar.html" class="register-button">
+        📝 Daftar Menjadi Anggota
+    </a>
+
+</section>
+
+
+</section>

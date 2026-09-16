@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Daftar Anggota - Imah Abah Official</title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+
+        .navbar {
+            background: #111;
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        .container {
+            max-width: 600px;
+
+            margin: 50px auto;
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.10);
+        }
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        label {
+            display: block;
+
+            margin-top: 15px;
+            margin-bottom: 7px;
+
+            font-weight: bold;
+        }
+
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+        }
+
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+
+        .submit-button {
+
+            width: 100%;
+
+            margin-top: 25px;
+
+            padding: 14px;
+
+            background: #111;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+
+        .submit-button:hover {
+            background: #333;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <a href="grup.html">
+            🏠 Home
+        </a>
+
+        <span style="color:white;">
+            Imah Abah Official
+        </span>
+
+    </nav>
+
+
+
+    <!-- FORM -->
+
+    <div class="container">
+
+        <h1>
+            📝 Daftar Keanggotaan
+        </h1>
+
+
+        <form>
+
+
+            <!-- NAMA -->
+
+            <label>
+                Nama Lengkap
+            </label>
+
+            <input
+                type="text"
+                placeholder="Masukkan nama lengkap"
+                required
+            >
+
+
+
+            <!-- NAMA PANGGILAN -->
+
+            <label>
+                Nama Panggilan
+            </label>
+
+            <input
+                type="text"
+                placeholder="Masukkan nama panggilan"
+                required
+            >
+
+
+
+            <!-- USIA -->
+
+            <label>
+                Usia
+            </label>
+
+            <input
+                type="number"
+                placeholder="Masukkan usia"
+                min="1"
+                max="100"
+                required
+            >
+
+
+
+            <!-- JENIS KELAMIN -->
+
+            <label>
+                Jenis Kelamin
+            </label>
+
+            <select required>
+
+                <option value="">
+                    Pilih jenis kelamin
+                </option>
+
+                <option>
+                    Laki-laki
+                </option>
+
+                <option>
+                    Perempuan
+                </option>
+
+            </select>
+
+
+
+            <!-- ALAMAT -->
+
+            <label>
+                Alamat
+            </label>
+
+            <input
+                type="text"
+                placeholder="Masukkan alamat"
+                required
+            >
+
+
+
+            <!-- WHATSAPP -->
+
+            <label>
+                Nomor WhatsApp
+            </label>
+
+            <input
+                type="tel"
+                placeholder="08xxxxxxxxxx"
+                required
+            >
+
+
+
+            <!-- FOTO -->
+
+            <label>
+                Foto Profil
+            </label>
+
+            <input
+                type="file"
+                accept="image/*"
+                required
+            >
+
+
+
+            <!-- BIO -->
+
+            <label>
+                Tentang Saya
+            </label>
+
+            <textarea
+                placeholder="Ceritakan sedikit tentang kamu..."
+            ></textarea>
+
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="submit-button"
+            >
+                Daftar Sekarang
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
