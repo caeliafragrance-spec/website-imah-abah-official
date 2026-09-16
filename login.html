@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Website Saya</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #f5f5f5;
+        }
+
+        .login-box {
+            width: 380px;
+
+            background: white;
+
+            padding: 35px;
+
+            border-radius: 15px;
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+
+            padding: 13px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 8px;
+
+            font-size: 15px;
+
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: #111;
+        }
+
+        .login-btn {
+            width: 100%;
+
+            padding: 13px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #111;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #333;
+        }
+
+        .register-text {
+            text-align: center;
+
+            margin-top: 20px;
+
+            font-size: 14px;
+
+            color: #666;
+        }
+
+        .register-text a {
+            color: #111;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .back-home {
+            display: block;
+
+            text-align: center;
+
+            margin-top: 15px;
+
+            color: #666;
+
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+        .back-home:hover {
+            color: #111;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <div class="login-box">
+
+        <h2>Login</h2>
+
+
+        <form>
+
+            <!-- USERNAME -->
+            <div class="input-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Masukkan username"
+                    required
+                >
+
+            </div>
+
+
+            <!-- PASSWORD -->
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Masukkan password"
+                    required
+                >
+
+            </div>
+
+
+            <!-- LOGIN -->
+            <button type="submit" class="login-btn">
+                Login
+            </button>
+
+        </form>
+
+
+        <!-- DAFTAR -->
+        <div class="register-text">
+
+            Belum punya akun?
+
+            <a href="daftar.html">
+                Daftar
+            </a>
+
+        </div>
+
+
+        <!-- KEMBALI -->
+        <a href="index.html" class="back-home">
+            ← Kembali ke Home
+        </a>
+
+
+    </div>
+
+
+</body>
+
+</html>
+
